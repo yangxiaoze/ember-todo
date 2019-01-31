@@ -89,6 +89,16 @@ input {
 	margin-right: 10px;
 }
 
+.ToDoItem-Text-Strike {
+	width: 90%;
+	background-color: lightseagreen;
+	border: 1px solid lightgrey;
+	box-shadow: 1px 1px 1px lightgrey;
+	padding: 12px;
+  margin-right: 10px;
+  text-decoration: line-through;
+}
+
 .ToDoItem-Done {
 	width: 33px;
 	padding: 8px;
@@ -183,3 +193,4 @@ input {
 	margin-top: 1px;
 	margin-left: 1px;
 }
+

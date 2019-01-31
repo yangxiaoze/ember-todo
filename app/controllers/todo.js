@@ -15,6 +15,8 @@ export default Ember.Controller.extend({
       todo.save().then(function(){
         if(value) {
           _this.notify.info('task ' + todo.get('task') + ' completed');
+        } else {
+          _this.notify.info('task ' + todo.get('task') + ' revert to uncompleted');
         }
       });
       return value;

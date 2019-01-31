@@ -5,7 +5,7 @@
       {{else}}
 		<div class="ToDoItem">
       {{input type="checkbox" checked=todo.completed class="ToDoItem-Check"}} &nbsp;&nbsp;
-			<p class="ToDoItem-Text"> {{todo.model.task}} </p>
+		  <p {{bind-attr class="todo.completed:ToDoItem-Text-Strike:ToDoItem-Text"}}> {{todo.model.task}} </p>
 			<div {{action 'editTodo'}} href class="ToDoItem-Edit glyphicon glyphicon-pencil"></div>
 			<div {{action 'removeTodo' todo}} href class="ToDoItem-Delete glyphicon glyphicon-remove"></div>
 		</div>
