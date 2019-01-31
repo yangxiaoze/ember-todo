@@ -1,6 +1,6 @@
 <form>
-  <div class="form-row form-inline">
-      {{input type='text' placeholder='Task name' value=newTask class='form-control'}}
-      <button {{action 'addTodo'}} class="btn btn-primary mb-2" {{bind-attr disabled=state}}> add </button>
+  <div class="form-row">
+      {{input type='text' placeholder='Task name' value=newTask class='form-control'}} <br>
+      <div {{action 'addTodo'}} class="ToDoItem-Add glyphicon glyphicon-plus"> </div>
   </div>
 </form>
