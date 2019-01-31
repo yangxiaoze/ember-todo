@@ -1,30 +1,17 @@
-<div class="row">
-  <div class="col-xs-12">
-    <h4><b>To Dos</b></h4>
-    <ul id="todos">
-      {{#each todo in model itemController='todo'}}
-        <li>
-          {{#if todo.isEditing}}
-            {{partial 'partials/edit-todo'}}
-          {{else}}
-            <h4 {{bind-attr class="todo.completed:strike"}}>
-              {{input type="checkbox" checked=todo.completed class="toggle"}}
-              {{todo.model.task}}
-              <div class="actions">
-                <a {{action 'editTodo'}} href class="edit-todo">
-                  <span class="glyphicon glyphicon-pencil"></span>
-                </a>
-                <a {{action 'removeTodo' todo}} href class="remove-todo">
-                  <span class="glyphicon glyphicon-remove"></span>
-                </a>
-              </div>
-            </h4>
-          {{/if}}
-        </li>
-        <hr>
+	<div class="ToDo-Content">
+    {{#each todo in model itemController='todo'}}
+      {{#if todo.isEditing}}
+        {{partial 'partials/edit-todo'}}
       {{else}}
+		<div class="ToDoItem">
+      {{input type="checkbox" checked=todo.completed class="ToDoItem-Check"}} &nbsp;&nbsp;
+			<p class="ToDoItem-Text"> {{todo.model.task}} </p>
+			<div {{action 'editTodo'}} href class="ToDoItem-Edit glyphicon glyphicon-pencil"></div>
+			<div {{action 'removeTodo' todo}} href class="ToDoItem-Delete glyphicon glyphicon-remove"> - </div>
+		</div>
+      {{/if}}
+
+    {{else}}
         <h4>No Tasks to do</h4>
-      {{/each}}
-    </ul>
-  </div>
-</div>
+    {{/each}}
+	</div>

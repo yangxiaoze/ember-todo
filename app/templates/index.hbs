@@ -1,15 +1,11 @@
-<div class="row">
-  <div class="col-lg-6 col-lg-offset-3">
-    <div class="row">
-      <h2><b>Todo0</b></h2>
-      <h5>A Todo app built using Ember.js and Firebase.</h5> 
-      <h5>Checkout source on <a href="https://github.com/sudharti/todo0">Github</a> and the <a href="https://medium.com/rails-ember-beyond/building-a-todo-app-using-ember-js-firebase-ba677e81e561#.g20n145d1">Blog post</a></h5><hr>
-    </div>
-    <div class="row">
-      <h4><b>Add new task</b></h4>
-      {{partial 'partials/todo-form'}}
-      <br>
+  <div id="app">
+	<div class="ToDo">
+	  <img class="Logo" src="https://i1.wp.com/opensourceforu.com/wp-content/uploads/2017/03/ember-js-1.png?w=690&amp;ssl=1">
+	  <h1 class="ToDo-Header">Ember To Do</h1>
+	  <div class="ToDo-Container">
       {{partial 'partials/todos'}}
-    </div>
+
+		  {{partial 'partials/todo-form'}}
+	  </div>
+	</div>
   </div>
-</div>
